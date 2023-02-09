@@ -75,6 +75,7 @@ button:hover {
 
     h2 {
         font-size: 18px;
+        margin-left: 100px;
     }
 
     #password {
@@ -90,7 +91,7 @@ button:hover {
     }
 
     .button-spaces {
-        margin-left: 90px;
+        margin-left: 85px;
         margin-top: 15px;
     }
     
