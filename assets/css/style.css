@@ -36,6 +36,7 @@ h2 {
     height: 200px;
     border-style: dashed;
     border-width: 2px;
+    border-radius: 2px;
     text-align: center;
     font-family: monospace;
     font-size: 25px;
@@ -64,4 +65,24 @@ button {
 button:hover {
     cursor: pointer;
     background-color: black;
+}
+
+@media screen and (max-width: 996px) {
+    #password {
+        width: 500px;
+        height: 200px;
+        border-style: dashed;
+        border-width: 2px;
+        border-radius: 2px;
+        text-align: center;
+        font-family: monospace;
+        font-size: 25px;
+        font-style: italic;
+    }
+
+    .button-spaces {
+        margin-left: 125px;
+        margin-top: 15px;
+    }
+    
 }
