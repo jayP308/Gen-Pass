@@ -11,6 +11,9 @@
 Sample Screenshot
 <img src="./assets/images/sample-screenshot.png" />
 
+Sample Phone View
+<img src="./assets/images/sample-phone-view.png" />
+
 ## Credits
 
 Junnel R. Padilla, Bootcamp Modules
