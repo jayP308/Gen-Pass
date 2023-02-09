@@ -12,3 +12,56 @@ body,
   padding: 0;
 }
 
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+.generate {
+    float: left;
+}
+
+#password {
+    width: 650px;
+    height: 200px;
+    border-style: dashed;
+    border-width: 2px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.button-spaces {
+    margin-left: 200px;
+    margin-top: 15px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 75px;
+    font-size: 25px;
+    background-color: rgb(205, 61, 61);
+    color: white;
+    border-radius: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: black;
+}
