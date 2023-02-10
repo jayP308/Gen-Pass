@@ -27,27 +27,65 @@ function generatePassword () {
         } else {
             alert("Please choose a number between 8-12");
         }
-    } else if (passwordLength <= 8 && passwordLength >= 12){
+    } else if (passwordLength <= 8 || passwordLength >= 12){
         alert("Characters must be a minimum of 8 and no more than 12");
     } else {
-        alert("Invalid input. Please Try Again. ");
+        alert("Invalid Input. Please Try Again. ");
     }
 
     /* Prompts user to add or dont add LOWERCASE to password */
-    firstEntry = prompt ("Would you like to include lowercase characters? ('Y' or 'N')");
+    firstEntry = prompt ("Would you like to include LOWERCASE characters? ('Y' or 'N')");
     if(firstEntry == "y" || firstEntry == "Y" || firstEntry == "yes" || firstEntry == "YES") {
         if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
-            alert ("Lower Case will be Added!");
+            alert ("LOWERCASE will be Added!");
         } else {
-            alert("Lower Case will NOT be added!");
+            alert("LOWERCASE will NOT be added!");
         } 
         } else if (firstEntry == "n" || firstEntry == "N" || firstEntry == "no" || firstEntry == "NO") {
             if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
-                alert ("Lower Case will NOT be Added!");
+                alert ("LOWERCASE will NOT be Added!");
             } else {
-                alert ("Lower Case will be Added!");
+                alert ("LOWERCASE will be Added!");
             }
     } else {
-        alert("Invalid input. Please Try Again. ");
+        alert("Invalid Input. Please Try Again. ");
     }
+
+    /* Prompts user to add or dont add UPPERCASE to password */
+    secondEntry = prompt ("Would you like to include UPPERCASE characters? ('Y' or 'N')");
+    if(secondEntry == "y" || secondEntry == "Y" || secondEntry == "yes" || secondEntry == "YES"){
+        if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
+            alert ("UPPERCASE will be Added!");
+        } else {
+            alert("UPPERCASE will NOT be added!");
+        } 
+        } else if (secondEntry == "n" || secondEntry == "N" || secondEntry == "no" || secondEntry == "NO") {
+            if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
+                alert ("UPPERCASE will NOT be Added!");
+            } else {
+                alert ("UPPERCASE will be Added!");
+            }
+    } else {
+            alert("Invalid Input. Please Try Again. ");
+    }
+
+     /* Prompts user to add or dont add NUMBERS to password */
+     thirdEntry = prompt ("Would you like to include NUMBERS? ('Y' or 'N')");
+     if(thirdEntry == "y" || thirdEntry  == "Y" || thirdEntry  == "yes" || thirdEntry  == "YES"){
+         if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
+             alert ("NUMBERS will be Added!");
+         } else {
+             alert("NUMBERS will NOT be added!");
+         } 
+         } else if (thirdEntry  == "n" || thirdEntry  == "N" || thirdEntry  == "no" || thirdEntry  == "NO") {
+             if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
+                 alert ("NUMBERS will NOT be Added!");
+             } else {
+                 alert ("NUMBERS will be Added!");
+             }
+     } else {
+             alert("Invalid Input. Please Try Again. ");
+     }
+
+     
 }
