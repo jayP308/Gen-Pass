@@ -46,17 +46,21 @@ function generatePassword () {
         if(firstEntry == "y" || firstEntry == "Y" || firstEntry == "yes" || firstEntry == "YES") {
             if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
                 alert ("LOWERCASE will be Added!");
+                lowerChar;
                 break;
             } else {
                 alert("LOWERCASE will NOT be added!");
+                lowerChar = " ";
                 break;
             } 
             } else if (firstEntry == "n" || firstEntry == "N" || firstEntry == "no" || firstEntry == "NO") {
                 if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
                     alert ("LOWERCASE will NOT be Added!");
+                    lowerChar = " ";
                     break;
                 } else {
                     alert ("LOWERCASE will be Added!");
+                    lowerChar;
                     break;
                 }
         } else {
@@ -138,5 +142,11 @@ function generatePassword () {
                 alert("Invalid Input. Please Try Again. ");
         }
     }
+
+    
+        if (firstEntry == "n" && secondEntry == "n" && thirdEntry == "n" && fourthEntry == "n") {
+            alert (" Must include at least one criteria. Please try again.")
+            generatePassword();
+        } 
      
 }
