@@ -75,17 +75,21 @@ function generatePassword () {
         if(secondEntry == "y" || secondEntry == "Y" || secondEntry == "yes" || secondEntry == "YES"){
             if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
                 alert ("UPPERCASE will be Added!");
+                upperChar;
                 break
             } else {
                 alert("UPPERCASE will NOT be added!");
+                upperChar = " ";
                 break;
             } 
             } else if (secondEntry == "n" || secondEntry == "N" || secondEntry == "no" || secondEntry == "NO") {
                 if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
                     alert ("UPPERCASE will NOT be Added!");
+                    upperChar = " ";
                     break;
                 } else {
                     alert ("UPPERCASE will be Added!");
+                    upperChar;
                     break;
                 }
         } else {
@@ -100,17 +104,21 @@ function generatePassword () {
         if(thirdEntry == "y" || thirdEntry  == "Y" || thirdEntry  == "yes" || thirdEntry  == "YES"){
             if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
                 alert ("NUMBERS will be Added!");
+                numberChar;
                 break;
             } else {
                 alert("NUMBERS will NOT be added!");
+                numberChar = " ";
                 break;
             }   
             } else if (thirdEntry  == "n" || thirdEntry  == "N" || thirdEntry  == "no" || thirdEntry  == "NO") {
                 if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
                     alert ("NUMBERS will NOT be Added!");
+                    numberChar = " ";
                     break;
                 } else {
                     alert ("NUMBERS will be Added!");
+                    numberChar;
                     break;
                 }
         } else {
@@ -125,17 +133,21 @@ function generatePassword () {
         if(fourthEntry == "y" || fourthEntry  == "Y" || fourthEntry == "yes" || fourthEntry  == "YES"){
             if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
                 alert ("SPECIAL CHARACTERS will be Added!");
+                specialChar;
                 break;
             } else {
                 alert("SPECIAL CHARACTERS will NOT be added!");
+                specialChar = " ";
                 break;
             } 
             } else if (fourthEntry  == "n" || fourthEntry  == "N" || fourthEntry  == "no" || fourthEntry  == "NO") {
                 if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
                     alert ("SPECIAL CHARACTERS will NOT be Added!");
+                    specialChar = " ";
                     break;
                 } else {
                     alert ("SPECIAL CHARACTERS will be Added!");
+                    specialChar;
                     break;
                 }
         } else {
@@ -143,10 +155,23 @@ function generatePassword () {
         }
     }
 
-    
-        if (firstEntry == "n" && secondEntry == "n" && thirdEntry == "n" && fourthEntry == "n") {
+
+        if (firstEntry + secondEntry + thirdEntry + fourthEntry == "n") {
             alert (" Must include at least one criteria. Please try again.")
             generatePassword();
         } 
      
+
+    // variable that includes all the lowercase, uppercase, numbers and special characters
+    var userChoiceCharacter =''.concat (lowerChar, upperChar, numberChar, specialChar);
+
+    //This section chooses random characters that was chosen by the user and display to the website
+    var generatedPass = "";
+
+    for (var i = 0; i < passwordLength; i++) {
+      var randomPin = Math.floor(Math.random() * userChoiceCharacter.length);
+      generatedPass += userChoiceCharacter.substring(randomPin, randomPin+1);
+    }
+  // returns the value
+  return generatedPass;
 }
