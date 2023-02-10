@@ -20,17 +20,22 @@ function writePassword () {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword () {
-    passwordLength = prompt ("How many characters do you want to add? (please choose between 8-12 charaacters)");
-    if(passwordLength >= 8 && passwordLength <=12) {
-        if(window.confirm("Please confirm the amount inputted:" + " " + passwordLength + " " + "characters")){
-            alert(passwordLength + " " +"characters added!");
+    while (true) {
+        /* Prompts user to choose number between 8-12 to include in password */
+        passwordLength = prompt ("How many characters do you want to add? (please choose between 8-12 charaacters)");
+        if(passwordLength >= 8 && passwordLength <=12) {
+            if(window.confirm("Please confirm the amount inputted:" + " " + passwordLength + " " + "characters")){
+                alert(passwordLength + " " +"characters added!");
+                break;
+            } else {
+                alert("Please choose a number between 8-12");
+                break;
+            }
+        } else if (passwordLength <= 8 || passwordLength >= 12){
+            alert("Characters must be a minimum of 8 and no more than 12");
         } else {
-            alert("Please choose a number between 8-12");
+            alert("Invalid Input. Please Try Again. ");
         }
-    } else if (passwordLength <= 8 || passwordLength >= 12){
-        alert("Characters must be a minimum of 8 and no more than 12");
-    } else {
-        alert("Invalid Input. Please Try Again. ");
     }
 
     /* Prompts user to add or dont add LOWERCASE to password */
