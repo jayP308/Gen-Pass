@@ -155,23 +155,23 @@ function generatePassword () {
         }
     }
 
-
+        /* re-prompts user to the first question if no criteria is chosen by the user */
         if (firstEntry + secondEntry + thirdEntry + fourthEntry == "n") {
             alert (" Must include at least one criteria. Please try again.")
             generatePassword();
         } 
      
 
-    // variable that includes all the lowercase, uppercase, numbers and special characters
+    /* variable that includes all the lowercase, uppercase, numbers and special characters */
     var userChoiceCharacter =''.concat (lowerChar, upperChar, numberChar, specialChar);
 
-    //This section chooses random characters that was chosen by the user and display to the website
+    /* This section chooses random characters that was chosen by the user and display to the website */
     var generatedPass = "";
 
     for (var i = 0; i < passwordLength; i++) {
       var randomPin = Math.floor(Math.random() * userChoiceCharacter.length);
       generatedPass += userChoiceCharacter.substring(randomPin, randomPin+1);
     }
-  // returns the value
+  /* returns the value */
   return generatedPass;
 }
