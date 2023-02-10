@@ -27,8 +27,10 @@ function generatePassword () {
         } else {
             alert("Please choose a number between 8-12");
         }
-    } else {
+    } else if (passwordLength <= 8 && passwordLength >= 12){
         alert("Characters must be a minimum of 8 and no more than 12");
+    } else {
+        alert("Invalid input. Please Try Again. ");
     }
 
     /* Prompts user to add or dont add LOWERCASE to password */
