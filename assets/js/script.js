@@ -23,9 +23,9 @@ function generatePassword () {
     /* While loop to re-prompt user is input is invalid or the number chosen is not between 8-12 */
     while (true) {
         /* Prompts user to choose number between 8-12 to include in password */
-        passwordLength = prompt ("How many characters do you want to add? (please choose between 8-12 charaacters)");
+        passwordLength = prompt ("How many characters do you want to add? (please choose between 8-12 characters)");
         if(passwordLength >= 8 && passwordLength <=12) {
-            if(window.confirm("Please confirm the amount inputted:" + " " + passwordLength + " " + "characters")){
+            if(window.confirm("Please confirm the amount inputed:" + " " + passwordLength + " " + "characters")){
                 alert(passwordLength + " " +"characters added!");
                 break;
             } else {
