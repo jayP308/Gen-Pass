@@ -89,23 +89,30 @@ function generatePassword () {
         }
     }
 
-     /* Prompts user to add or dont add NUMBERS to password */
-     thirdEntry = prompt ("Would you like to include NUMBERS? ('Y' or 'N')");
-     if(thirdEntry == "y" || thirdEntry  == "Y" || thirdEntry  == "yes" || thirdEntry  == "YES"){
-         if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
-             alert ("NUMBERS will be Added!");
-         } else {
-             alert("NUMBERS will NOT be added!");
-         } 
-         } else if (thirdEntry  == "n" || thirdEntry  == "N" || thirdEntry  == "no" || thirdEntry  == "NO") {
-             if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
-                 alert ("NUMBERS will NOT be Added!");
-             } else {
-                 alert ("NUMBERS will be Added!");
-             }
-     } else {
-             alert("Invalid Input. Please Try Again. ");
-     }
+    /* While loop to re-prompt if input is invalid */
+    while (true) {
+        /* Prompts user to add or dont add NUMBERS to password */
+        thirdEntry = prompt ("Would you like to include NUMBERS? ('Y' or 'N')");
+        if(thirdEntry == "y" || thirdEntry  == "Y" || thirdEntry  == "yes" || thirdEntry  == "YES"){
+            if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
+                alert ("NUMBERS will be Added!");
+                break;
+            } else {
+                alert("NUMBERS will NOT be added!");
+                break;
+            }   
+            } else if (thirdEntry  == "n" || thirdEntry  == "N" || thirdEntry  == "no" || thirdEntry  == "NO") {
+                if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
+                    alert ("NUMBERS will NOT be Added!");
+                    break;
+                } else {
+                    alert ("NUMBERS will be Added!");
+                    break;
+                }
+        } else {
+                alert("Invalid Input. Please Try Again. ");
+        }
+    }
 
      /* Prompts user to add or dont add SPECIAL CHARACTERS to password */
      fourthEntry = prompt ("Would you like to include SPECIAL CHARACTERS? ('Y' or 'N')");
