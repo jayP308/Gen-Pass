@@ -64,22 +64,29 @@ function generatePassword () {
         }
     }
 
-    /* Prompts user to add or dont add UPPERCASE to password */
-    secondEntry = prompt ("Would you like to include UPPERCASE characters? ('Y' or 'N')");
-    if(secondEntry == "y" || secondEntry == "Y" || secondEntry == "yes" || secondEntry == "YES"){
-        if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
-            alert ("UPPERCASE will be Added!");
-        } else {
-            alert("UPPERCASE will NOT be added!");
-        } 
-        } else if (secondEntry == "n" || secondEntry == "N" || secondEntry == "no" || secondEntry == "NO") {
+    /* While loop to re-prompt if input is invalid */
+    while (true) {
+        /* Prompts user to add or dont add UPPERCASE to password */
+        secondEntry = prompt ("Would you like to include UPPERCASE characters? ('Y' or 'N')");
+        if(secondEntry == "y" || secondEntry == "Y" || secondEntry == "yes" || secondEntry == "YES"){
             if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
-                alert ("UPPERCASE will NOT be Added!");
-            } else {
                 alert ("UPPERCASE will be Added!");
-            }
-    } else {
-            alert("Invalid Input. Please Try Again. ");
+                break
+            } else {
+                alert("UPPERCASE will NOT be added!");
+                break;
+            } 
+            } else if (secondEntry == "n" || secondEntry == "N" || secondEntry == "no" || secondEntry == "NO") {
+                if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
+                    alert ("UPPERCASE will NOT be Added!");
+                    break;
+                } else {
+                    alert ("UPPERCASE will be Added!");
+                    break;
+                }
+        } else {
+                alert("Invalid Input. Please Try Again. ");
+        }
     }
 
      /* Prompts user to add or dont add NUMBERS to password */
