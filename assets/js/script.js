@@ -20,6 +20,7 @@ function writePassword () {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword () {
+    /* While loop to re-prompt user is input is invalid or the number chosen is not between 8-12 */
     while (true) {
         /* Prompts user to choose number between 8-12 to include in password */
         passwordLength = prompt ("How many characters do you want to add? (please choose between 8-12 charaacters)");
@@ -38,22 +39,29 @@ function generatePassword () {
         }
     }
 
-    /* Prompts user to add or dont add LOWERCASE to password */
-    firstEntry = prompt ("Would you like to include LOWERCASE characters? ('Y' or 'N')");
-    if(firstEntry == "y" || firstEntry == "Y" || firstEntry == "yes" || firstEntry == "YES") {
-        if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
-            alert ("LOWERCASE will be Added!");
-        } else {
-            alert("LOWERCASE will NOT be added!");
-        } 
-        } else if (firstEntry == "n" || firstEntry == "N" || firstEntry == "no" || firstEntry == "NO") {
+    /* While loop to re-prompt if input is invalid */
+    while (true) {
+        /* Prompts user to add or dont add LOWERCASE to password */
+        firstEntry = prompt ("Would you like to include LOWERCASE characters? ('Y' or 'N')");
+        if(firstEntry == "y" || firstEntry == "Y" || firstEntry == "yes" || firstEntry == "YES") {
             if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
-                alert ("LOWERCASE will NOT be Added!");
-            } else {
                 alert ("LOWERCASE will be Added!");
-            }
-    } else {
-        alert("Invalid Input. Please Try Again. ");
+                break;
+            } else {
+                alert("LOWERCASE will NOT be added!");
+                break;
+            } 
+            } else if (firstEntry == "n" || firstEntry == "N" || firstEntry == "no" || firstEntry == "NO") {
+                if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
+                    alert ("LOWERCASE will NOT be Added!");
+                    break;
+                } else {
+                    alert ("LOWERCASE will be Added!");
+                    break;
+                }
+        } else {
+            alert("Invalid Input. Please Try Again. ");
+        }
     }
 
     /* Prompts user to add or dont add UPPERCASE to password */
