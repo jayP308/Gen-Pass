@@ -87,5 +87,22 @@ function generatePassword () {
              alert("Invalid Input. Please Try Again. ");
      }
 
+     /* Prompts user to add or dont add SPECIAL CHARACTERS to password */
+     fourthEntry = prompt ("Would you like to include SPECIAL CHARACTERS? ('Y' or 'N')");
+     if(fourthEntry == "y" || fourthEntry  == "Y" || fourthEntry == "yes" || fourthEntry  == "YES"){
+         if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
+             alert ("SPECIAL CHARACTERS will be Added!");
+         } else {
+             alert("SPECIAL CHARACTERS will NOT be added!");
+         } 
+         } else if (fourthEntry  == "n" || fourthEntry  == "N" || fourthEntry  == "no" || fourthEntry  == "NO") {
+             if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
+                 alert ("SPECIAL CHARACTERS will NOT be Added!");
+             } else {
+                 alert ("SPECIAL CHARACTERS will be Added!");
+             }
+     } else {
+             alert("Invalid Input. Please Try Again. ");
+     }
      
 }
