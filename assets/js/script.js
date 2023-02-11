@@ -59,34 +59,15 @@ function generatePassword () {
                 upperChar = " ";
             } 
 
-    /* While loop to re-prompt if input is invalid */
-    while (true) {
-        /* Prompts user to add or dont add NUMBERS to password */
-        thirdEntry = prompt ("Would you like to include NUMBERS? ('Y' or 'N')");
-        if(thirdEntry == "y" || thirdEntry  == "Y" || thirdEntry  == "yes" || thirdEntry  == "YES"){
-            if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
+    /* Prompts user to add or dont add NUMBERS to password */
+    thirdEntry = confirm ("Would you like to include NUMBERS to your password? (press 'OK' to add or press 'Cancel' to not add)");
+        if(thirdEntry === true ) {
                 alert ("NUMBERS will be Added!");
                 numberChar;
-                break;
             } else {
                 alert("NUMBERS will NOT be added!");
                 numberChar = " ";
-                break;
-            }   
-            } else if (thirdEntry  == "n" || thirdEntry  == "N" || thirdEntry  == "no" || thirdEntry  == "NO") {
-                if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
-                    alert ("NUMBERS will NOT be Added!");
-                    numberChar = " ";
-                    break;
-                } else {
-                    alert ("NUMBERS will be Added!");
-                    numberChar;
-                    break;
-                }
-        } else {
-                alert("Invalid Input. Please Try Again. ");
-        }
-    }
+            } 
 
     /* While loop to re-prompt if input is invalid */
     while (true) {
