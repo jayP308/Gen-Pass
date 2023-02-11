@@ -6,6 +6,8 @@
 
 ## URL
 
+https://jayp308.github.io/gen-pass/
+
 ## Screenshots
 
 Sample Screenshot

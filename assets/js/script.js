@@ -64,7 +64,7 @@ function generatePassword () {
                     break;
                 }
         } else {
-            alert("Invalid Input. Please Try Again. ");
+            alert("Invalid Input. Please Try Again.");
         }
     }
 
@@ -156,7 +156,7 @@ function generatePassword () {
     }
 
         /* re-prompts user to the first question if no criteria is chosen by the user */
-        if (firstEntry + secondEntry + thirdEntry + fourthEntry == "n") {
+        if (firstEntry + secondEntry + thirdEntry + fourthEntry == " ") {
             alert (" Must include at least one criteria. Please try again.")
             generatePassword();
         } 
