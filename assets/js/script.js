@@ -39,34 +39,16 @@ function generatePassword () {
         }
     }
 
-    /* While loop to re-prompt if input is invalid */
-    while (true) {
+    
         /* Prompts user to add or dont add LOWERCASE to password */
-        firstEntry = prompt ("Would you like to include LOWERCASE characters? ('Y' or 'N')");
-        if(firstEntry == "y" || firstEntry == "Y" || firstEntry == "yes" || firstEntry == "YES") {
-            if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
+    firstEntry = confirm ("Would you like to include LOWERCASE letters to your password? (press 'OK' to add or press 'Cancel' to not add)");
+        if(firstEntry === true ) {
                 alert ("LOWERCASE will be Added!");
                 lowerChar;
-                break;
-            } else {
+            } else  if (firstEntry === false) {
                 alert("LOWERCASE will NOT be added!");
                 lowerChar = " ";
-                break;
             } 
-            } else if (firstEntry == "n" || firstEntry == "N" || firstEntry == "no" || firstEntry == "NO") {
-                if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
-                    alert ("LOWERCASE will NOT be Added!");
-                    lowerChar = " ";
-                    break;
-                } else {
-                    alert ("LOWERCASE will be Added!");
-                    lowerChar;
-                    break;
-                }
-        } else {
-            alert("Invalid Input. Please Try Again.");
-        }
-    }
 
     /* While loop to re-prompt if input is invalid */
     while (true) {
