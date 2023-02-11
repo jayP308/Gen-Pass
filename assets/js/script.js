@@ -39,45 +39,25 @@ function generatePassword () {
         }
     }
 
-    
-        /* Prompts user to add or dont add LOWERCASE to password */
+    /* Prompts user to add or dont add LOWERCASE to password */
     firstEntry = confirm ("Would you like to include LOWERCASE letters to your password? (press 'OK' to add or press 'Cancel' to not add)");
         if(firstEntry === true ) {
                 alert ("LOWERCASE will be Added!");
                 lowerChar;
-            } else  if (firstEntry === false) {
+            } else {
                 alert("LOWERCASE will NOT be added!");
                 lowerChar = " ";
             } 
 
-    /* While loop to re-prompt if input is invalid */
-    while (true) {
-        /* Prompts user to add or dont add UPPERCASE to password */
-        secondEntry = prompt ("Would you like to include UPPERCASE characters? ('Y' or 'N')");
-        if(secondEntry == "y" || secondEntry == "Y" || secondEntry == "yes" || secondEntry == "YES"){
-            if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
+    /* Prompts user to add or dont add UPPERCASE to password */
+    secondEntry = confirm ("Would you like to include UPPERCASE letters to your password? (press 'OK' to add or press 'Cancel' to not add)");
+        if(secondEntry === true ) {
                 alert ("UPPERCASE will be Added!");
                 upperChar;
-                break
             } else {
                 alert("UPPERCASE will NOT be added!");
                 upperChar = " ";
-                break;
             } 
-            } else if (secondEntry == "n" || secondEntry == "N" || secondEntry == "no" || secondEntry == "NO") {
-                if (window.confirm("Please press 'OK' to confirm, otherwise hit 'CANCEL'")) {
-                    alert ("UPPERCASE will NOT be Added!");
-                    upperChar = " ";
-                    break;
-                } else {
-                    alert ("UPPERCASE will be Added!");
-                    upperChar;
-                    break;
-                }
-        } else {
-                alert("Invalid Input. Please Try Again. ");
-        }
-    }
 
     /* While loop to re-prompt if input is invalid */
     while (true) {
