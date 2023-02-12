@@ -19,7 +19,7 @@ Desktop View
 <img src="./assets/images/desktop-view.png" />
 
 Phone View
-<img src="./assets/images/phone-view.png" />
+<img src="./assets/images/phone-view.png" /> <img src="./assets/images/desktop-view.png" />
 
 ## Credits
 
