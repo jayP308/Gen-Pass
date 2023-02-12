@@ -23,7 +23,7 @@ Phone View
 
 ## Credits
 
-Junnel R. Padilla, Bootcamp Modules
+Junnel R. Padilla, Bootcamp Modules, UC Berkeley Extension TA, stackoverflow
 
 ## License
 
