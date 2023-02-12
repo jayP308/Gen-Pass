@@ -16,10 +16,10 @@ https://jayp308.github.io/gen-pass/
 ## Screenshots
 
 Desktop View
-<img src="./assets/images/desktop-view.png" />
+<img src="./assets/images/desktop-view1.png" />
 
 Phone View
-<img src="./assets/images/desktop-view.png" />
+<img src="./assets/images/phone-view1.png" />
 
 ## Credits
 
