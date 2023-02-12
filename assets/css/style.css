@@ -1,9 +1,11 @@
+/* Universal Selector */
 *
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+/* Element Selector w/ Class Selector */
 html,
 body,
 .wrapper {
@@ -12,6 +14,8 @@ body,
   padding: 0;
 }
 
+/* Class Selector */
+/* put all content inside a div on top of the body element */
 .wrap {
     display: flex;
     justify-content: center;
@@ -19,18 +23,25 @@ body,
     flex-direction: column;
 }
 
+/* Element Selector */
+/* changes size of the element */
 h1 {
     font-size: 40px;
 }
-
+/* Element Selector */
+/* changes size of the element */
 h2 {
     font-size: 25px;
 }
 
+/* Class Selector */
+/* Places the text "Generate Password" to the left of the screen */
 .generate {
     float: left;
 }
 
+/* ID Selector */
+/* added style, size and placement of the text area */
 #password {
     width: 650px;
     height: 200px;
@@ -43,11 +54,15 @@ h2 {
     font-style: italic;
 }
 
+/* Class Selector */
+/* places button to the center at the bottom of the text area */
 .button-spaces {
     margin-left: 200px;
     margin-top: 15px;
 }
 
+/* Element Selector */
+/* adds style and size to the "Generate Password" button */
 button {
     display: flex;
     justify-content: center;
@@ -62,11 +77,14 @@ button {
     padding-right: 25px;
 }
 
+/* changes both curser and backgroun color of the button when mouse hover over it */ 
 button:hover {
     cursor: pointer;
     background-color: black;
 }
 
+/* Media Query */
+/* This adds the compatibility of other devices */
 @media screen and (max-width: 996px) {
 
     h1 {

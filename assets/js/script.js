@@ -93,6 +93,6 @@ function generatePassword () {
       var randomPin = Math.floor(Math.random() * userChoiceCharacter.length);
       generatedPass += userChoiceCharacter.substring(randomPin, randomPin+1);
     }
-  /* returns the value */
+  /* returns the value base on criteria chosen randomly */
   return generatedPass;
 }
