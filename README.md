@@ -15,11 +15,11 @@ https://jayp308.github.io/gen-pass/
 
 ## Screenshots
 
-Sample Screenshot
-<img src="./assets/images/sample-screenshot.png" />
+Desktop View
+<img src="./assets/images/desktop-view.png" />
 
-Sample Phone View
-<img src="./assets/images/sample-phone-view.png" />
+Phone View
+<img src="./assets/images/phone-view.png" />
 
 ## Credits
 
