@@ -52,6 +52,7 @@ h2 {
     font-family: monospace;
     font-size: 25px;
     font-style: italic;
+    resize: none;
 }
 
 /* Class Selector */
