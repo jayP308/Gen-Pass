@@ -2,7 +2,12 @@
 
 ## Description
 
+Welcome to my Password Generator. This app includes a generate button that if click, the user will be presented
+with a series of prompt of what criteria to include in the password that it will generate randomly. I also added a function where if user does not choose at least one criteria, no password will be generated and will have to start over with answering the prompt.
+
 ## Usage
+
+This particular app allows user suggest a type of password generated randomly. This app can be use just in case a user doesnt feel like making up their own password or just could not think of anything. This also serves a purpose of getting a unique password keys and wont be the same with every user that uses this app.
 
 ## URL
 
